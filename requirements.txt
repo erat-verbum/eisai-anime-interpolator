@@ -1,0 +1,5 @@
+kornia==0.5.2
+gdown
+opencv-python
+opencv-contrib-python
+cupy
