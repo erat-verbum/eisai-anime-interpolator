@@ -1,5 +1,5 @@
 kornia==0.5.2
-gdown
+# gdown
 opencv-python
 opencv-contrib-python
-cupy
+# cupy
