@@ -75,7 +75,6 @@ def infer(frames_dir):
         num_intermediary_frames = frame_num - prev_frame_num -1
 
         if num_intermediary_frames > 0:
-
             # load images
             img0 = I(prev_file_path).convert('RGB')
             img1 = I(file_path).convert('RGB')
@@ -104,6 +103,10 @@ def infer(frames_dir):
                 ans,_ = interpolate(ssl, dtm, x, t=t)
 
                 ans.resize(original_size).save(intermediary_frame_file_path)
+
+        prev_frame_num = frame_num
+        prev_file_path = file_path
+
 
 # evaluate
 if __name__=='__main__':
